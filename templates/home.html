@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for books in object_list %}
+    <div class="post-entry">
+        <ul>
+            <h2><a href="{% url 'book_detail' books.pk %}"><li>Title: {{books.title}}</li></a></h2>
+            <i><b></i><li>Author: {{books.author}}</li></b></i>
+            <li>Discription: {{books.body}}</li>
+            <li>ISBN: {{books.ISBN}}</li>
+        </ul>
+    </div>
+    {% endfor %}
+
+{% endblock content %}
+
